@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-RUN apt-get update
+RUN apt-get update && apt-get install -y tesseract-ocr libheif1 libde265-0 ffmpeg
 RUN pip install --upgrade pip setuptools
 
 COPY requirements.txt .
